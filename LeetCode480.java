@@ -20,6 +20,7 @@ public class LeetCode480 {
             if (o2.equals(o1)) return 0;
             return -1;
         });
+
         //小顶堆用于存放大于等于中位数的值
         PriorityQueue<Long> smallHeap = new PriorityQueue<>();
         //初始化 两个堆
