@@ -6,7 +6,8 @@ import java.util.Comparator;
 public class LeetCode354 {
 
     public static void main(String[] args) {
-
+        int arr[][] = {{4,5},{4,6},{6,7},{2,3},{1,1}};
+        System.out.println(maxEnvelopes(arr));
     }
 
     public static int maxEnvelopes(int[][] envelopes) {
@@ -25,6 +26,8 @@ public class LeetCode354 {
                 }
             }
         });
+
+        System.out.println(Arrays.deepToString(envelopes));
 
         int[] f = new int[n];
         Arrays.fill(f, 1);
