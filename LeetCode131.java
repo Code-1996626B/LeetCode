@@ -11,8 +11,7 @@ public class LeetCode131 {
     int n;
 
     public static void main(String[] args) {
-        String s = "abc";
-        System.out.println(s.substring(0,2));
+        System.out.println(new LeetCode131().partition("abbab"));
     }
 
     public List<List<String>> partition(String s) {
@@ -22,12 +21,12 @@ public class LeetCode131 {
             Arrays.fill(f[i], true);
         }
 
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = i + 1; j < n; j++) {
+        for (int i = n-1; i >=0; i--) {
+            for (int j = i+1; j < n; j++) {
                 f[i][j] = (s.charAt(i) == s.charAt(j)) && f[i + 1][j - 1];
             }
         }
-
+        System.out.println(Arrays.deepToString(f));
         return ret;
 
     }
